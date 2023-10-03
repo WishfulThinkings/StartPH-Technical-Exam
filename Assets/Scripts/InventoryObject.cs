@@ -1,3 +1,5 @@
+using Firebase.Database;
+using Google.MiniJSON;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -13,7 +15,6 @@ public class InventoryObject : ScriptableObject
         {
             if (container[i].item == _item)
             {
-                
                 container[i].AddAmount(_amount);
                 hastItem = true;
                 break;
@@ -29,7 +30,7 @@ public class InventoryObject : ScriptableObject
         {
             if (container[i].item == _item && canReduce == true)
             {
-                if (container[i].amount == 0)
+                if (container[i].amount == 1)
                 {
                     
                     canReduce = false;
@@ -49,6 +50,7 @@ public class InventorySlot
 {
     public ItemScript item;
     public int amount;
+    public int inventorySlotNumber;
     public InventorySlot(ItemScript _item, int _amount)
     {
         item = _item;
@@ -64,4 +66,10 @@ public class InventorySlot
     {
         amount -= value;
     }
+
+    public void ChangeInventoryPosition(int _inventorySlotNumber) 
+    { 
+        inventorySlotNumber = _inventorySlotNumber;
+    }
+
 }

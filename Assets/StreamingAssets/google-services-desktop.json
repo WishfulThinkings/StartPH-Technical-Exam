@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "610206345384",
+    "firebase_url": "https://startph-technical-exam-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    "project_id": "startph-technical-exam",
+    "storage_bucket": "startph-technical-exam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:610206345384:android:8530f7d4f126891e5c7a9d",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.StartPHExam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBD2X5gFG-jyxZa2AQZ_gTl95YZW91hB_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

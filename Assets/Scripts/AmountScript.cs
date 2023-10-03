@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -12,6 +13,8 @@ public class AmountScript : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     public Image image;
     public Transform topOfObject;
     public int inventoryNumber;
+    public int inventorySlotNumber;
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         transform.SetParent(transform.root);
@@ -43,7 +46,7 @@ public class AmountScript : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 
     void Update()
     {
-        if(text.text == "0")
+        if (text.text == "0" || text.text == "1")
         {
             text.text = "";
         }
